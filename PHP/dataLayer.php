@@ -143,16 +143,12 @@ function doAddFriend($newFriend,$currentUser){
 function doSearchUsers($friend, $currentUser){
   $conn = doDBconnection();
   $resultArr = array();
-  $friendSearch = $friend . "%"; //permite buscar parte del nombre del usuario o email
+  // $friendSearch = $friend . "%"; //permite buscar parte del nombre del usuario o email
   //y no necesariamente hace que el usuario escriba tooooodo
   if($conn != NULL){
-    $sqlUser = "SELECT *
-                FROM Users
-                Where ( uName LIKE '$friendSearch'
-                  OR  uEmail LIKE '$friendSearch' )
-                AND uName <> '$currentUser'"
-              ;
-    $result = $conn->query($sqlUser);
+    $query = "SELECT * FROM Users  WHERE (uName LIKE '%$friend%' OR uEmail like '%$friend%') AND uName NOT IN (SELECT idFriend FROM friendList WHERE uName = '$currentUser')";
+
+    $result = $conn->query($query);
     if($result->num_rows>0){
       while($row = $result->fetch_assoc()){
         $response = array("username"=>$row["uName"],

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title> My Friends </title>
+  <title> Search Users </title>
   <link rel="stylesheet" href="css/style.css" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Palanquin:200" rel="stylesheet">
 </head>
@@ -19,12 +19,3 @@
     </ul>
   </div>
   <h2 style="font-weight: bold;"> Connecting and sharing with people since 2017 </h2>
-
-
-<div id='friendResults'>
-</div>
-
-<script type="text/javascript" src="jasons/jquery.js"></script>
-<script type="text/javascript" src="jasons/searchUsers.js"></script>
-</body>
-</html>
