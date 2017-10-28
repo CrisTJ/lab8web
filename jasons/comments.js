@@ -28,6 +28,7 @@ function LoadComments(){
         ContentType : "application/json",
         dataType: "json",
         success: function(result){
+          // If the request was successful, I'm expecting the comments
             console.log(result);
             var newHtml = "<div>";
             result.forEach(function(resultCount){
@@ -91,6 +92,8 @@ function logOut(){
   });
 }
 */
+
+// Event handlers
 
 $(document).ready(onloaded);
 btnComment.click("on", AddComment);

@@ -14,7 +14,7 @@
       <li><a href="home.php">Home</a></li>
       <li><a href="profile.php">Profile</a></li>
       <li><a href="searchUsers.php">Search Users</a></li>
-      <li><a href="myFriends.php">Search Users</a></li>
+      <li><a href="myFriends.php">Friend Requests</a></li>
       <li><a id="logout" href="login.php">Logout</a></li>
     </ul>
   </div>
@@ -25,6 +25,6 @@
 </div>
 
 <script type="text/javascript" src="jasons/jquery.js"></script>
-<script type="text/javascript" src="jasons/searchUsers.js"></script>
+<script type="text/javascript" src="jasons/friendRequest.js"></script>
 </body>
 </html>
